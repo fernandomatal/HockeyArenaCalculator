@@ -13,6 +13,7 @@
 		A882B1B2225E0CA80064B6D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A882B1B0225E0CA80064B6D0 /* Main.storyboard */; };
 		A882B1BE225E0CA80064B6D0 /* HockeyArenaCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A882B1BD225E0CA80064B6D0 /* HockeyArenaCalculatorTests.swift */; };
 		A882B1C9225E0CA80064B6D0 /* HockeyArenaCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A882B1C8225E0CA80064B6D0 /* HockeyArenaCalculatorUITests.swift */; };
+		B88C226946AFFA23DF000566 /* Pods_HockeyArenaCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B657A1DD92040951DF6DC23 /* Pods_HockeyArenaCalculator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		039ECBD74E533708832206C0 /* Pods-HockeyArenaCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HockeyArenaCalculator.release.xcconfig"; path = "Target Support Files/Pods-HockeyArenaCalculator/Pods-HockeyArenaCalculator.release.xcconfig"; sourceTree = "<group>"; };
+		3B657A1DD92040951DF6DC23 /* Pods_HockeyArenaCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HockeyArenaCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A882B1A7225E0CA50064B6D0 /* HockeyArenaCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HockeyArenaCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A882B1AA225E0CA50064B6D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A882B1AC225E0CA50064B6D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		A882B1C4225E0CA80064B6D0 /* HockeyArenaCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HockeyArenaCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A882B1C8225E0CA80064B6D0 /* HockeyArenaCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HockeyArenaCalculatorUITests.swift; sourceTree = "<group>"; };
 		A882B1CA225E0CA80064B6D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D29C0D37E5F2A1A86344310B /* Pods-HockeyArenaCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HockeyArenaCalculator.debug.xcconfig"; path = "Target Support Files/Pods-HockeyArenaCalculator/Pods-HockeyArenaCalculator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B88C226946AFFA23DF000566 /* Pods_HockeyArenaCalculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +78,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76E7068AE55CF1BC35923E84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D29C0D37E5F2A1A86344310B /* Pods-HockeyArenaCalculator.debug.xcconfig */,
+				039ECBD74E533708832206C0 /* Pods-HockeyArenaCalculator.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A8189CF9225E1A35009AD099 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A882B1AC225E0CA50064B6D0 /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A8189CFA225E1A3C009AD099 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A8189CFB225E1A47009AD099 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 		A882B19E225E0CA50064B6D0 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +116,8 @@
 				A882B1BC225E0CA80064B6D0 /* HockeyArenaCalculatorTests */,
 				A882B1C7225E0CA80064B6D0 /* HockeyArenaCalculatorUITests */,
 				A882B1A8225E0CA50064B6D0 /* Products */,
+				76E7068AE55CF1BC35923E84 /* Pods */,
+				DDE3DCC9B1B8E6810C64C8C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,8 +134,10 @@
 		A882B1A9225E0CA50064B6D0 /* HockeyArenaCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				A8189CFB225E1A47009AD099 /* Library */,
+				A8189CFA225E1A3C009AD099 /* Models */,
+				A8189CF9225E1A35009AD099 /* Views */,
 				A882B1AA225E0CA50064B6D0 /* AppDelegate.swift */,
-				A882B1AC225E0CA50064B6D0 /* ViewController.swift */,
 				A882B1AE225E0CA80064B6D0 /* Assets.xcassets */,
 				A882B1B0225E0CA80064B6D0 /* Main.storyboard */,
 				A882B1B3225E0CA80064B6D0 /* Info.plist */,
@@ -124,6 +164,14 @@
 			path = HockeyArenaCalculatorUITests;
 			sourceTree = "<group>";
 		};
+		DDE3DCC9B1B8E6810C64C8C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B657A1DD92040951DF6DC23 /* Pods_HockeyArenaCalculator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,9 +179,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A882B1CD225E0CA80064B6D0 /* Build configuration list for PBXNativeTarget "HockeyArenaCalculator" */;
 			buildPhases = (
+				F5A3D1A3C6BA5CF75F9F1F01 /* [CP] Check Pods Manifest.lock */,
 				A882B1A3225E0CA50064B6D0 /* Sources */,
 				A882B1A4225E0CA50064B6D0 /* Frameworks */,
 				A882B1A5225E0CA50064B6D0 /* Resources */,
+				B3FB4BA39C58688401AB1418 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,6 +298,63 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B3FB4BA39C58688401AB1418 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HockeyArenaCalculator/Pods-HockeyArenaCalculator-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Marshal/Marshal.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Marshal.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HockeyArenaCalculator/Pods-HockeyArenaCalculator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5A3D1A3C6BA5CF75F9F1F01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HockeyArenaCalculator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A882B1A3225E0CA50064B6D0 /* Sources */ = {
@@ -419,6 +526,7 @@
 		};
 		A882B1CE225E0CA80064B6D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D29C0D37E5F2A1A86344310B /* Pods-HockeyArenaCalculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HockeyArenaCalculator/HockeyArenaCalculator.entitlements;
@@ -437,6 +545,7 @@
 		};
 		A882B1CF225E0CA80064B6D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 039ECBD74E533708832206C0 /* Pods-HockeyArenaCalculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HockeyArenaCalculator/HockeyArenaCalculator.entitlements;
