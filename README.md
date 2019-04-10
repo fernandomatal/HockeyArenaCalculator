@@ -1,6 +1,6 @@
 # Hockey Arena Calculator
 
-This app is a way to improve your experience on the popular online Hockey game [Hockey Arena](https://www.hockeyarena.net), that I have been playing for the last 14 years, but never actually got to it.
+This app is a way to improve your experience on the popular online Hockey game [Hockey Arena](https://www.hockeyarena.net), that I have been playing for the last 14 years, but never actually got into it.
 
 The first implementation includes:
 
@@ -12,5 +12,7 @@ Upload a file with your players' information in order to add, update and remove 
 
 Calculate the max potential of your youth players or potential scouting.
 
+
+-----------------------------------------------
 
 More things to come in the future, like suggesting training programs.
