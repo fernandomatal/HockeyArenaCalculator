@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8189CFD225EC7E1009AD099 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8189CFC225EC7E1009AD099 /* Player.swift */; };
 		A882B1AB225E0CA50064B6D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A882B1AA225E0CA50064B6D0 /* AppDelegate.swift */; };
 		A882B1AD225E0CA50064B6D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A882B1AC225E0CA50064B6D0 /* ViewController.swift */; };
 		A882B1AF225E0CA80064B6D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A882B1AE225E0CA80064B6D0 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		039ECBD74E533708832206C0 /* Pods-HockeyArenaCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HockeyArenaCalculator.release.xcconfig"; path = "Target Support Files/Pods-HockeyArenaCalculator/Pods-HockeyArenaCalculator.release.xcconfig"; sourceTree = "<group>"; };
 		3B657A1DD92040951DF6DC23 /* Pods_HockeyArenaCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HockeyArenaCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8189CFC225EC7E1009AD099 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		A882B1A7225E0CA50064B6D0 /* HockeyArenaCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HockeyArenaCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A882B1AA225E0CA50064B6D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A882B1AC225E0CA50064B6D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		A8189CFA225E1A3C009AD099 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A8189CFC225EC7E1009AD099 /* Player.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-HockeyArenaCalculator/Pods-HockeyArenaCalculator-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Marshal/Marshal.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -322,6 +326,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Marshal.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -362,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A882B1AD225E0CA50064B6D0 /* ViewController.swift in Sources */,
+				A8189CFD225EC7E1009AD099 /* Player.swift in Sources */,
 				A882B1AB225E0CA50064B6D0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,6 +545,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mx.fernandomata.HockeyArenaCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -558,6 +565,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mx.fernandomata.HockeyArenaCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
