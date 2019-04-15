@@ -14,6 +14,7 @@
 		A882B1B2225E0CA80064B6D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A882B1B0225E0CA80064B6D0 /* Main.storyboard */; };
 		A882B1BE225E0CA80064B6D0 /* HockeyArenaCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A882B1BD225E0CA80064B6D0 /* HockeyArenaCalculatorTests.swift */; };
 		A882B1C9225E0CA80064B6D0 /* HockeyArenaCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A882B1C8225E0CA80064B6D0 /* HockeyArenaCalculatorUITests.swift */; };
+		A8E7182F2260D00B0004920F /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7182E2260D00B0004920F /* MainMenu.swift */; };
 		B88C226946AFFA23DF000566 /* Pods_HockeyArenaCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B657A1DD92040951DF6DC23 /* Pods_HockeyArenaCalculator.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		A882B1C4225E0CA80064B6D0 /* HockeyArenaCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HockeyArenaCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A882B1C8225E0CA80064B6D0 /* HockeyArenaCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HockeyArenaCalculatorUITests.swift; sourceTree = "<group>"; };
 		A882B1CA225E0CA80064B6D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8E7182E2260D00B0004920F /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		D29C0D37E5F2A1A86344310B /* Pods-HockeyArenaCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HockeyArenaCalculator.debug.xcconfig"; path = "Target Support Files/Pods-HockeyArenaCalculator/Pods-HockeyArenaCalculator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				A8189CFC225EC7E1009AD099 /* Player.swift */,
+				A8E7182E2260D00B0004920F /* MainMenu.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 			files = (
 				A882B1AD225E0CA50064B6D0 /* ViewController.swift in Sources */,
 				A8189CFD225EC7E1009AD099 /* Player.swift in Sources */,
+				A8E7182F2260D00B0004920F /* MainMenu.swift in Sources */,
 				A882B1AB225E0CA50064B6D0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,9 +10,12 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    fileprivate let mainMenu = MainMenu.menuOrdered
+    
+    @IBOutlet weak var tableView: NSTableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +24,19 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
+    
+    private func configureTable() {
+        tableView.rowSizeStyle = .custom
+    }
+}
 
-
+extension ViewController: NSTableViewDataSource, NSTableViewDelegate {
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        return tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: mainMenu[row].cellIdentifier), owner: self)
+    }
 }
 
