@@ -41,20 +41,31 @@ class MainViewController: NSViewController {
             self.mainMenu = mainMenu
             self.tableView.reloadData()
         }).disposed(by: disposeBag)
-    }
-    
-    private func bindGestures() {
         
+        viewModel.outputs.currentMenu
+        .withLatestFrom(viewModel.outputs.mainMenu, resultSelector: { ($0, $1.firstIndex(of: $0)) })
+        .subscribe(onNext: { [unowned self] (menu, selectionIndex) in
+            guard let selectionIndex = selectionIndex else {
+                return
+            }
+            
+            self.tableView.selectRowIndexes([selectionIndex], byExtendingSelection: false)
+        }).disposed(by: disposeBag)
     }
 }
 
 extension MainViewController: NSTableViewDataSource, NSTableViewDelegate {
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return 3
+        return mainMenu.count
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         return tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: mainMenu[row].cellIdentifier), owner: self)
+    }
+    
+    func tableView(_ tableView: NSTableView, shouldSelectRow row: Int) -> Bool {
+        viewModel.inputs.didSelectRow.onNext(row)
+        return false
     }
 }
 
