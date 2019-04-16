@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		A8189CFD225EC7E1009AD099 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8189CFC225EC7E1009AD099 /* Player.swift */; };
 		A882B1AB225E0CA50064B6D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A882B1AA225E0CA50064B6D0 /* AppDelegate.swift */; };
-		A882B1AD225E0CA50064B6D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A882B1AC225E0CA50064B6D0 /* ViewController.swift */; };
+		A882B1AD225E0CA50064B6D0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A882B1AC225E0CA50064B6D0 /* MainViewController.swift */; };
 		A882B1AF225E0CA80064B6D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A882B1AE225E0CA80064B6D0 /* Assets.xcassets */; };
 		A882B1B2225E0CA80064B6D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A882B1B0225E0CA80064B6D0 /* Main.storyboard */; };
 		A882B1BE225E0CA80064B6D0 /* HockeyArenaCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A882B1BD225E0CA80064B6D0 /* HockeyArenaCalculatorTests.swift */; };
 		A882B1C9225E0CA80064B6D0 /* HockeyArenaCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A882B1C8225E0CA80064B6D0 /* HockeyArenaCalculatorUITests.swift */; };
+		A8A6F8502265FFEB00ADC352 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6F84F2265FFEB00ADC352 /* MenuCell.swift */; };
+		A8B551942264B93F002FB5EA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B551932264B93F002FB5EA /* MainViewModel.swift */; };
+		A8B551962264CBBF002FB5EA /* MenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B551952264CBBF002FB5EA /* MenuTableView.swift */; };
 		A8E7182F2260D00B0004920F /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7182E2260D00B0004920F /* MainMenu.swift */; };
 		B88C226946AFFA23DF000566 /* Pods_HockeyArenaCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B657A1DD92040951DF6DC23 /* Pods_HockeyArenaCalculator.framework */; };
 /* End PBXBuildFile section */
@@ -41,7 +44,7 @@
 		A8189CFC225EC7E1009AD099 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		A882B1A7225E0CA50064B6D0 /* HockeyArenaCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HockeyArenaCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A882B1AA225E0CA50064B6D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A882B1AC225E0CA50064B6D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A882B1AC225E0CA50064B6D0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A882B1AE225E0CA80064B6D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A882B1B1225E0CA80064B6D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A882B1B3225E0CA80064B6D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +55,9 @@
 		A882B1C4225E0CA80064B6D0 /* HockeyArenaCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HockeyArenaCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A882B1C8225E0CA80064B6D0 /* HockeyArenaCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HockeyArenaCalculatorUITests.swift; sourceTree = "<group>"; };
 		A882B1CA225E0CA80064B6D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8A6F84F2265FFEB00ADC352 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		A8B551932264B93F002FB5EA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		A8B551952264CBBF002FB5EA /* MenuTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableView.swift; sourceTree = "<group>"; };
 		A8E7182E2260D00B0004920F /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		D29C0D37E5F2A1A86344310B /* Pods-HockeyArenaCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HockeyArenaCalculator.debug.xcconfig"; path = "Target Support Files/Pods-HockeyArenaCalculator/Pods-HockeyArenaCalculator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,7 +100,9 @@
 		A8189CF9225E1A35009AD099 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A882B1AC225E0CA50064B6D0 /* ViewController.swift */,
+				A8A6F84E2265FFEB00ADC352 /* Cells */,
+				A8A6F84C2265FC9100ADC352 /* Controllers */,
+				A8A6F8482265FC3C00ADC352 /* Views */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -143,6 +151,7 @@
 				A8189CFB225E1A47009AD099 /* Library */,
 				A8189CFA225E1A3C009AD099 /* Models */,
 				A8189CF9225E1A35009AD099 /* Views */,
+				A8B551922264B91E002FB5EA /* ViewModels */,
 				A882B1AA225E0CA50064B6D0 /* AppDelegate.swift */,
 				A882B1AE225E0CA80064B6D0 /* Assets.xcassets */,
 				A882B1B0225E0CA80064B6D0 /* Main.storyboard */,
@@ -168,6 +177,38 @@
 				A882B1CA225E0CA80064B6D0 /* Info.plist */,
 			);
 			path = HockeyArenaCalculatorUITests;
+			sourceTree = "<group>";
+		};
+		A8A6F8482265FC3C00ADC352 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A8B551952264CBBF002FB5EA /* MenuTableView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A8A6F84C2265FC9100ADC352 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A882B1AC225E0CA50064B6D0 /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A8A6F84E2265FFEB00ADC352 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A8A6F84F2265FFEB00ADC352 /* MenuCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A8B551922264B91E002FB5EA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A8B551932264B93F002FB5EA /* MainViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		DDE3DCC9B1B8E6810C64C8C5 /* Frameworks */ = {
@@ -369,7 +410,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A882B1AD225E0CA50064B6D0 /* ViewController.swift in Sources */,
+				A8A6F8502265FFEB00ADC352 /* MenuCell.swift in Sources */,
+				A8B551942264B93F002FB5EA /* MainViewModel.swift in Sources */,
+				A8B551962264CBBF002FB5EA /* MenuTableView.swift in Sources */,
+				A882B1AD225E0CA50064B6D0 /* MainViewController.swift in Sources */,
 				A8189CFD225EC7E1009AD099 /* Player.swift in Sources */,
 				A8E7182F2260D00B0004920F /* MainMenu.swift in Sources */,
 				A882B1AB225E0CA50064B6D0 /* AppDelegate.swift in Sources */,

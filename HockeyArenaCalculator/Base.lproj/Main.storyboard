@@ -702,24 +702,24 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="HockeyArenaCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="MainViewController" customModule="HockeyArenaCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView autohidesScrollers="YES" horizontalLineScroll="42" horizontalPageScroll="10" verticalLineScroll="42" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9C-DA-cS1">
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="40" horizontalPageScroll="10" verticalLineScroll="40" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9C-DA-cS1">
                                 <rect key="frame" x="0.0" y="0.0" width="145" height="270"/>
                                 <clipView key="contentView" copiesOnScroll="NO" id="Kga-il-yca">
                                     <rect key="frame" x="1" y="1" width="143" height="268"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="40" viewBased="YES" id="7P7-Kg-Ame">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="40" viewBased="YES" id="7P7-Kg-Ame" customClass="MenuTableView" customModule="HockeyArenaCalculator" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="143" height="229"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <size key="intercellSpacing" width="3" height="2"/>
+                                            <size key="intercellSpacing" width="3" height="0.0"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
@@ -736,8 +736,8 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView identifier="PlayersCell" id="GyA-Fa-yaJ">
-                                                            <rect key="frame" x="1" y="1" width="140" height="40"/>
+                                                        <tableCellView identifier="PlayersCell" id="GyA-Fa-yaJ" customClass="MenuCell" customModule="HockeyArenaCalculator" customModuleProvider="target">
+                                                            <rect key="frame" x="1" y="0.0" width="140" height="40"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <imageView translatesAutoresizingMaskIntoConstraints="NO" id="a4O-Yk-MVR">
@@ -769,8 +769,8 @@
                                                                 <outlet property="textField" destination="ZKB-17-ZKe" id="ZKK-aH-HLj"/>
                                                             </connections>
                                                         </tableCellView>
-                                                        <tableCellView identifier="YouthsCell" id="XQn-hc-QsY">
-                                                            <rect key="frame" x="1" y="43" width="140" height="40"/>
+                                                        <tableCellView identifier="YouthsCell" id="XQn-hc-QsY" customClass="MenuCell" customModule="HockeyArenaCalculator" customModuleProvider="target">
+                                                            <rect key="frame" x="1" y="40" width="140" height="40"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <imageView translatesAutoresizingMaskIntoConstraints="NO" id="Chu-b8-zNK">
@@ -802,8 +802,8 @@
                                                                 <outlet property="textField" destination="jgS-bt-UTJ" id="e7X-rE-13B"/>
                                                             </connections>
                                                         </tableCellView>
-                                                        <tableCellView identifier="LinesCell" id="pLX-Bu-ET0">
-                                                            <rect key="frame" x="1" y="85" width="140" height="40"/>
+                                                        <tableCellView identifier="LinesCell" id="pLX-Bu-ET0" customClass="MenuCell" customModule="HockeyArenaCalculator" customModuleProvider="target">
+                                                            <rect key="frame" x="1" y="80" width="140" height="40"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <imageView translatesAutoresizingMaskIntoConstraints="NO" id="CTx-t9-woh">

@@ -7,16 +7,23 @@
 //
 
 import Cocoa
+import RxSwift
+import RxCocoa
 
-class ViewController: NSViewController {
-
-    fileprivate let mainMenu = MainMenu.menuOrdered
+class MainViewController: NSViewController {
     
-    @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet weak var tableView: MenuTableView!
+    
+    fileprivate var mainMenu: [MainMenu] = []
+    
+    fileprivate let viewModel: MainViewModelType = MainViewModel()
+    fileprivate var disposeBag: DisposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        bindViewModel()
     }
 
     override var representedObject: Any? {
@@ -28,9 +35,20 @@ class ViewController: NSViewController {
     private func configureTable() {
         tableView.rowSizeStyle = .custom
     }
+    
+    private func bindViewModel() {
+        viewModel.outputs.mainMenu.subscribe(onNext: { [unowned self] (mainMenu) in
+            self.mainMenu = mainMenu
+            self.tableView.reloadData()
+        }).disposed(by: disposeBag)
+    }
+    
+    private func bindGestures() {
+        
+    }
 }
 
-extension ViewController: NSTableViewDataSource, NSTableViewDelegate {
+extension MainViewController: NSTableViewDataSource, NSTableViewDelegate {
     func numberOfRows(in tableView: NSTableView) -> Int {
         return 3
     }
