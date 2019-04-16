@@ -24,5 +24,14 @@ enum MainMenu {
         }
     }
     
+    var viewClass: MenuView.Type? {
+        switch self {
+        case .players:
+            return PlayersView.self
+        default:
+            return nil
+        }
+    }
+    
     static let menuOrdered: [MainMenu] = [.players, .youths, .lines]
 }

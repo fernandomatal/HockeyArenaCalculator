@@ -712,7 +712,7 @@
                         <subviews>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="40" horizontalPageScroll="10" verticalLineScroll="40" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9C-DA-cS1">
                                 <rect key="frame" x="0.0" y="0.0" width="145" height="270"/>
-                                <clipView key="contentView" copiesOnScroll="NO" id="Kga-il-yca">
+                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="Kga-il-yca">
                                     <rect key="frame" x="1" y="1" width="143" height="268"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -747,6 +747,7 @@
                                                                         <constraint firstAttribute="height" constant="20" id="VZb-w4-0Ts"/>
                                                                     </constraints>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" imageScaling="proportionallyDown" image="player" id="UuH-n8-BkP"/>
+                                                                    <color key="contentTintColor" red="0.1803921568627451" green="0.19215686274509802" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </imageView>
                                                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZKB-17-ZKe">
                                                                     <rect key="frame" x="29" y="12" width="113" height="17"/>
@@ -780,6 +781,7 @@
                                                                         <constraint firstAttribute="height" constant="20" id="qIG-um-lOb"/>
                                                                     </constraints>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" imageScaling="proportionallyDown" image="stick" id="M9y-FC-1MC"/>
+                                                                    <color key="contentTintColor" red="0.1803921568627451" green="0.19215686274509802" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </imageView>
                                                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jgS-bt-UTJ">
                                                                     <rect key="frame" x="29" y="12" width="113" height="17"/>
@@ -813,6 +815,7 @@
                                                                         <constraint firstAttribute="height" constant="20" id="pAC-Bv-VJr"/>
                                                                     </constraints>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" imageScaling="proportionallyDown" image="rink" id="kJd-PJ-ei5"/>
+                                                                    <color key="contentTintColor" red="0.1803921568627451" green="0.19215686274509802" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </imageView>
                                                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xcB-UP-PKS">
                                                                     <rect key="frame" x="29" y="12" width="113" height="17"/>
@@ -844,6 +847,7 @@
                                             </connections>
                                         </tableView>
                                     </subviews>
+                                    <nil key="backgroundColor"/>
                                 </clipView>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="145" id="Fxu-NP-WIx"/>
@@ -859,15 +863,23 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="0GD-6h-55b">
+                                <rect key="frame" x="145" y="0.0" width="335" height="270"/>
+                            </customView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="0GD-6h-55b" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="0n0-io-WSj"/>
                             <constraint firstAttribute="bottom" secondItem="m9C-DA-cS1" secondAttribute="bottom" id="SZs-Pk-CdI"/>
+                            <constraint firstItem="0GD-6h-55b" firstAttribute="leading" secondItem="m9C-DA-cS1" secondAttribute="trailing" id="SpW-hs-wwn"/>
+                            <constraint firstAttribute="trailing" secondItem="0GD-6h-55b" secondAttribute="trailing" id="bAC-5c-T6m"/>
+                            <constraint firstAttribute="bottom" secondItem="0GD-6h-55b" secondAttribute="bottom" id="eNg-KR-EI7"/>
                             <constraint firstItem="m9C-DA-cS1" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="fI3-Jw-qM2"/>
                             <constraint firstItem="m9C-DA-cS1" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="nnB-h8-orc"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="7P7-Kg-Ame" id="soy-7B-xaG"/>
+                        <outlet property="viewContainer" destination="0GD-6h-55b" id="dU3-8R-SCM"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

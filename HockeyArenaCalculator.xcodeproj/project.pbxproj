@@ -15,8 +15,11 @@
 		A882B1BE225E0CA80064B6D0 /* HockeyArenaCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A882B1BD225E0CA80064B6D0 /* HockeyArenaCalculatorTests.swift */; };
 		A882B1C9225E0CA80064B6D0 /* HockeyArenaCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A882B1C8225E0CA80064B6D0 /* HockeyArenaCalculatorUITests.swift */; };
 		A8A6F8502265FFEB00ADC352 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6F84F2265FFEB00ADC352 /* MenuCell.swift */; };
+		A8A6F8542266117B00ADC352 /* PlayersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6F8532266117B00ADC352 /* PlayersViewModel.swift */; };
+		A8A6F857226614B900ADC352 /* PlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6F856226614B900ADC352 /* PlayersView.swift */; };
+		A8A6F85C226617AD00ADC352 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6F85B226617AD00ADC352 /* MenuView.swift */; };
+		A8A6F85E2266210900ADC352 /* MenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6F85D2266210900ADC352 /* MenuTableView.swift */; };
 		A8B551942264B93F002FB5EA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B551932264B93F002FB5EA /* MainViewModel.swift */; };
-		A8B551962264CBBF002FB5EA /* MenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B551952264CBBF002FB5EA /* MenuTableView.swift */; };
 		A8E7182F2260D00B0004920F /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7182E2260D00B0004920F /* MainMenu.swift */; };
 		B88C226946AFFA23DF000566 /* Pods_HockeyArenaCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B657A1DD92040951DF6DC23 /* Pods_HockeyArenaCalculator.framework */; };
 /* End PBXBuildFile section */
@@ -56,8 +59,11 @@
 		A882B1C8225E0CA80064B6D0 /* HockeyArenaCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HockeyArenaCalculatorUITests.swift; sourceTree = "<group>"; };
 		A882B1CA225E0CA80064B6D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8A6F84F2265FFEB00ADC352 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		A8A6F8532266117B00ADC352 /* PlayersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewModel.swift; sourceTree = "<group>"; };
+		A8A6F856226614B900ADC352 /* PlayersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersView.swift; sourceTree = "<group>"; };
+		A8A6F85B226617AD00ADC352 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		A8A6F85D2266210900ADC352 /* MenuTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableView.swift; sourceTree = "<group>"; };
 		A8B551932264B93F002FB5EA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		A8B551952264CBBF002FB5EA /* MenuTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableView.swift; sourceTree = "<group>"; };
 		A8E7182E2260D00B0004920F /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		D29C0D37E5F2A1A86344310B /* Pods-HockeyArenaCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HockeyArenaCalculator.debug.xcconfig"; path = "Target Support Files/Pods-HockeyArenaCalculator/Pods-HockeyArenaCalculator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +118,7 @@
 			children = (
 				A8189CFC225EC7E1009AD099 /* Player.swift */,
 				A8E7182E2260D00B0004920F /* MainMenu.swift */,
+				A8A6F85B226617AD00ADC352 /* MenuView.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -182,7 +189,8 @@
 		A8A6F8482265FC3C00ADC352 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A8B551952264CBBF002FB5EA /* MenuTableView.swift */,
+				A8A6F85D2266210900ADC352 /* MenuTableView.swift */,
+				A8A6F856226614B900ADC352 /* PlayersView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				A8B551932264B93F002FB5EA /* MainViewModel.swift */,
+				A8A6F8532266117B00ADC352 /* PlayersViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -410,9 +419,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8A6F85E2266210900ADC352 /* MenuTableView.swift in Sources */,
 				A8A6F8502265FFEB00ADC352 /* MenuCell.swift in Sources */,
 				A8B551942264B93F002FB5EA /* MainViewModel.swift in Sources */,
-				A8B551962264CBBF002FB5EA /* MenuTableView.swift in Sources */,
+				A8A6F857226614B900ADC352 /* PlayersView.swift in Sources */,
+				A8A6F8542266117B00ADC352 /* PlayersViewModel.swift in Sources */,
+				A8A6F85C226617AD00ADC352 /* MenuView.swift in Sources */,
 				A882B1AD225E0CA50064B6D0 /* MainViewController.swift in Sources */,
 				A8189CFD225EC7E1009AD099 /* Player.swift in Sources */,
 				A8E7182F2260D00B0004920F /* MainMenu.swift in Sources */,

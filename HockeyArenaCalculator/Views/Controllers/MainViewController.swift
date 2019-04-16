@@ -9,12 +9,17 @@
 import Cocoa
 import RxSwift
 import RxCocoa
+import SnapKit
 
 class MainViewController: NSViewController {
     
     @IBOutlet weak var tableView: MenuTableView!
+    @IBOutlet weak var viewContainer: NSView!
     
     fileprivate var mainMenu: [MainMenu] = []
+    
+    fileprivate var views: [MainMenu : MenuView] = [:]
+    fileprivate var currentView: MenuView?
     
     fileprivate let viewModel: MainViewModelType = MainViewModel()
     fileprivate var disposeBag: DisposeBag = DisposeBag()
@@ -50,7 +55,36 @@ class MainViewController: NSViewController {
             }
             
             self.tableView.selectRowIndexes([selectionIndex], byExtendingSelection: false)
+            self.renderView(selectedMenu: menu)
         }).disposed(by: disposeBag)
+    }
+    
+    private func renderView(selectedMenu: MainMenu) {
+        if views[selectedMenu] == nil {
+            // If view doesn't exit create a new one
+            guard let newView = selectedMenu.viewClass?.init() else {
+                // Clean everything if view can't be created
+                currentView?.willDisappear()
+                currentView?.view.removeFromSuperview()
+                currentView = nil
+                return
+            }
+            
+            views[selectedMenu] = newView
+        }
+        
+        // Clean old view
+        currentView?.willDisappear()
+        currentView?.view.removeFromSuperview()
+        
+        // Configure new views
+        let menuView = views[selectedMenu]!
+        viewContainer.addSubview(menuView.view)
+        menuView.view.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+        menuView.willAppear()
+        currentView = menuView
     }
 }
 
@@ -64,8 +98,8 @@ extension MainViewController: NSTableViewDataSource, NSTableViewDelegate {
     }
     
     func tableView(_ tableView: NSTableView, shouldSelectRow row: Int) -> Bool {
+        // Send selection to view model and disable UI action
         viewModel.inputs.didSelectRow.onNext(row)
         return false
     }
 }
-
