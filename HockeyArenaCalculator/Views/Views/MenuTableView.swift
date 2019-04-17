@@ -13,6 +13,13 @@ import RxCocoa
 class MenuTableView: NSTableView {
     private let pointingCursor = NSCursor.pointingHand
     
+    override func draw(_ dirtyRect: NSRect) {
+        super.draw(dirtyRect)
+        
+        NSColor.lightGray.setFill()
+        dirtyRect.fill()
+    }
+    
     override func mouseDown(with event: NSEvent) {
         let globalLocation = event.locationInWindow
         let localLocation = convert(globalLocation, from: nil)
