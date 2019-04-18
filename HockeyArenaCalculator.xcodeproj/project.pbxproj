@@ -20,6 +20,7 @@
 		A8A6F85C226617AD00ADC352 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6F85B226617AD00ADC352 /* MenuView.swift */; };
 		A8A6F85E2266210900ADC352 /* MenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6F85D2266210900ADC352 /* MenuTableView.swift */; };
 		A8A6F8612266ADF400ADC352 /* StyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6F8602266ADF400ADC352 /* StyleGuide.swift */; };
+		A8A6F86B226768C700ADC352 /* MenuCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6F86A226768C700ADC352 /* MenuCellModel.swift */; };
 		A8B551942264B93F002FB5EA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B551932264B93F002FB5EA /* MainViewModel.swift */; };
 		A8E7182F2260D00B0004920F /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7182E2260D00B0004920F /* MainMenu.swift */; };
 		B88C226946AFFA23DF000566 /* Pods_HockeyArenaCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B657A1DD92040951DF6DC23 /* Pods_HockeyArenaCalculator.framework */; };
@@ -65,6 +66,7 @@
 		A8A6F85B226617AD00ADC352 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		A8A6F85D2266210900ADC352 /* MenuTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableView.swift; sourceTree = "<group>"; };
 		A8A6F8602266ADF400ADC352 /* StyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuide.swift; sourceTree = "<group>"; };
+		A8A6F86A226768C700ADC352 /* MenuCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellModel.swift; sourceTree = "<group>"; };
 		A8B551932264B93F002FB5EA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		A8E7182E2260D00B0004920F /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		D29C0D37E5F2A1A86344310B /* Pods-HockeyArenaCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HockeyArenaCalculator.debug.xcconfig"; path = "Target Support Files/Pods-HockeyArenaCalculator/Pods-HockeyArenaCalculator.debug.xcconfig"; sourceTree = "<group>"; };
@@ -214,9 +216,18 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		A8A6F869226768C000ADC352 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A8A6F86A226768C700ADC352 /* MenuCellModel.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		A8B551922264B91E002FB5EA /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A8A6F869226768C000ADC352 /* Cells */,
 				A8B551932264B93F002FB5EA /* MainViewModel.swift */,
 				A8A6F8532266117B00ADC352 /* PlayersViewModel.swift */,
 			);
@@ -426,6 +437,7 @@
 				A8A6F8502265FFEB00ADC352 /* MenuCell.swift in Sources */,
 				A8B551942264B93F002FB5EA /* MainViewModel.swift in Sources */,
 				A8A6F857226614B900ADC352 /* PlayersView.swift in Sources */,
+				A8A6F86B226768C700ADC352 /* MenuCellModel.swift in Sources */,
 				A8A6F8542266117B00ADC352 /* PlayersViewModel.swift in Sources */,
 				A8A6F85C226617AD00ADC352 /* MenuView.swift in Sources */,
 				A8A6F8612266ADF400ADC352 /* StyleGuide.swift in Sources */,

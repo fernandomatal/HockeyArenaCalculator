@@ -25,6 +25,9 @@ protocol MainViewModelOutputs {
     
     /// Returns the selected value
     var currentMenu: Observable<MainMenu> { get }
+    
+    /// Get previous valie
+    var previousSelectedRow: Observable<Int> { get }
 }
 
 class MainViewModel: MainViewModelType, MainViewModelInputs, MainViewModelOutputs {
@@ -35,6 +38,8 @@ class MainViewModel: MainViewModelType, MainViewModelInputs, MainViewModelOutput
     let mainMenu: Observable<[MainMenu]>
     
     let currentMenu: Observable<MainMenu>
+    
+    let previousSelectedRow: Observable<Int>
     
     // Subjects
     private let mainMenuSubject: BehaviorSubject<[MainMenu]> = BehaviorSubject<[MainMenu]>(value: MainMenu.menuOrdered)
@@ -47,6 +52,10 @@ class MainViewModel: MainViewModelType, MainViewModelInputs, MainViewModelOutput
         mainMenu = mainMenuSubject
         
         currentMenu = selectedRowSubject.withLatestFrom(mainMenuSubject, resultSelector: { $1[$0] })
+        
+        previousSelectedRow = selectedRowSubject.scan([Int](), accumulator: { (seed, newValue) -> [Int] in
+            return seed.count > 1 ? [seed[1]] + [newValue] : seed + [newValue]
+        }).map({ $0[0] }).skip(1)
     }
     
     var inputs: MainViewModelInputs { return self }

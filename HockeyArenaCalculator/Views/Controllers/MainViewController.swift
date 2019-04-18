@@ -39,6 +39,7 @@ class MainViewController: NSViewController {
     
     private func configureTable() {
         tableView.rowSizeStyle = .custom
+        tableView.selectionHighlightStyle = .none
     }
     
     private func bindViewModel() {
@@ -56,6 +57,13 @@ class MainViewController: NSViewController {
             
             self.tableView.selectRowIndexes([selectionIndex], byExtendingSelection: false)
             self.renderView(selectedMenu: menu)
+        }).disposed(by: disposeBag)
+        
+        viewModel.outputs.previousSelectedRow
+            .subscribe(onNext: { [unowned self] (deselectedRow) in
+                if let menuCell = self.tableView.view(atColumn: 0, row: deselectedRow, makeIfNecessary: true) as? MenuCell {
+                    menuCell.selected = false
+                }
         }).disposed(by: disposeBag)
     }
     
@@ -101,5 +109,11 @@ extension MainViewController: NSTableViewDataSource, NSTableViewDelegate {
         // Send selection to view model and disable UI action
         viewModel.inputs.didSelectRow.onNext(row)
         return false
+    }
+    
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        if let menuCell = tableView.view(atColumn: 0, row: tableView.selectedRow, makeIfNecessary: true) as? MenuCell {
+            menuCell.selected = true
+        }
     }
 }
