@@ -59,7 +59,6 @@ class MenuCellModel: MenuCellModelType, MenuCellModelInputs, MenuCellModelOutput
         updateSelection = Observable.combineLatest(selectedSubject,
                                                    highlightedSubject)
                                     .map({ $0 || $1 })
-                                    .debounce(0.1, scheduler: MainScheduler.instance)
     }
     
     var inputs: MenuCellModelInputs { return self }
